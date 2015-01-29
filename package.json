@@ -1,0 +1,30 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-pc": "browserify ./lib/pc.js -o ./static/pc-bundle.js",
+    "build-mobile": "browserify ./lib/mobile.js -o ./static/mobile-bundle.js",
+    "build": "npm run build-pc & npm run build-mobile",
+    "watch": "jung ./lib/*.js -- npm run build"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "canvas-fit": "^1.2.0",
+    "clamp": "^1.0.1",
+    "ecstatic": "^0.5.8",
+    "fade": "^0.2.0",
+    "hammerjs": "^2.0.4",
+    "make-random-string": "^1.0.5",
+    "server-url": "^1.0.1",
+    "through": "^2.3.6",
+    "websocket-stream": "^1.3.2"
+  },
+  "devDependencies": {
+    "browserify": "^8.1.1",
+    "jung": "^2.0.2"
+  }
+}
